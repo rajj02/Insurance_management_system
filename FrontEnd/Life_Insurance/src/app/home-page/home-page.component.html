@@ -1,0 +1,58 @@
+
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div style ="height:400px" class="carousel-item active">
+        <img src="https://prod-sitefinity-library.kappro.com/images/default-source/career-corner/starting-career/insurance-producer_16.jpg?sfvrsn=d94c9803_5" class="d-block w-100" alt="...">
+      </div>
+      <div style ="height:400px" class="carousel-item">
+        <img src="https://www.libertyinsurance.in/two-wheeler-insurance/amp/images/Two%20Wheeler_amp.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div style ="height:400px" class="carousel-item">
+        <img src="https://www.outlookindia.com/outlookmoney/public/uploads/article/gallery/38d9affd650492adbb3cb0d29daa771c.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <!-- <button type="button"  routerLink="/policy1"class="btn btn-success">Add Policies</button> -->
+
+
+  <!-- <p>Here is the policy list</p> -->
+
+  <div class="container my-5">
+    <h1 class="mb-3">PolicyList</h1>
+
+    <table class="table table-striped table-hover" *ngIf="policies && policies.length >0" >
+        <thead>
+            <th>PolicyName</th>
+            <th>Cover Amount($)</th>
+            <th>Duration(In years)</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let policy of policies">
+                
+                <td>{{policy.policyName}}</td>
+                <td>{{policy.policyCover}}</td>
+                <td>{{policy.duration}}</td>
+               
+                
+        
+                  <td><button type="button" class="btn btn-primary m-2"><a [routerLink]="['/home','policydetail',policy.policyId]"
+                    style="color:white;text-decoration:none">View</a></button></td>
+                 
+            </tr>
+          
+        </tbody>
+    </table>
+    
+</div>

@@ -1,0 +1,66 @@
+<div class = "register">
+
+<form  [formGroup]='registerForm'(ngSubmit)="registerSubmitted(registerForm)" >
+  <div class = "row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class = "fs-3">Register</span>
+    </div>
+  </div>
+  <div class ="row">
+    <div class = "col mb-3">
+      <label style="color:aliceblue;margin-left: 30px;" for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" formControlName='name' placeholder="enter name">
+      <div class="form-text text-danger" *ngIf="Name.errors?.['required']&&Name.touched">
+          name is required </div>
+      
+      <div class="form-text text-danger" *ngIf="Name.errors?.['minlength']&&Name.touched">
+        name is too short</div> 
+
+       <div class="form-text text-danger" *ngIf="Name.errors?.['pattern']&&Name.touched">
+        name should start with alphabet</div> 
+   </div>
+    
+  </div>
+  <div class="row">
+    <div class = "col mb-3" >
+      <label for="email" style="color:aliceblue;margin-left: 30px;" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" formControlName='email' placeholder="enter email id">
+      <div class="form-text text-danger" *ngIf="Email.errors?.['required']&&Email.touched">
+        email is required </div>
+     
+     <div class="form-text text-danger" *ngIf="Email.errors?.['email']&&Email.touched">
+      email pattern is invalid</div> 
+    </div>
+  </div>
+  
+
+
+    <div class="row">
+      <div class = "col mb-3" >
+        <label for="pwd" style="color:aliceblue;margin-left: 30px;"  class="form-label">Password</label>
+        <input type="password" class="form-control" id="pwd" formControlName='pwd' placeholder="enter password" > 
+        <div class="form-text text-danger" *ngIf="PWD.errors?.['required']&& PWD.touched">
+          password is required </div>
+
+          <div class="form-text text-danger" *ngIf="(PWD.errors?.['minlength']||PWD.errors?.['maxlength'])&& PWD.touched">
+            min length should be 6 and max length should be 15 </div>
+
+      </div>
+      <div class = "col mb-3" >
+        <label for="rpwd" style="color:aliceblue;margin-left: 30px;" class="form-label">Re-enter password</label>
+        <input type="password" class="form-control" id="rpwd" formControlName='rpwd'placeholder="re-enter password"> 
+        
+         <!-- <div class="form-text text-danger" [ngStyle]="{'dispaly':repeatpass}">
+          password is wrong </div> -->
+      </div> 
+    </div>
+    <div class="row">
+      <div class = "col-6 offset-3" >
+       <div class="d-grid">
+         <button type="submit" class ="btn btn-primary">Register</button>
+       </div>
+      </div>
+     </div>
+</form>
+
+</div>

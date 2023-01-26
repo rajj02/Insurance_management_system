@@ -1,0 +1,42 @@
+      
+      <div class="login">
+        
+
+        <form [formGroup]="ApplyForm" (ngSubmit)="ApplyNow(ApplyForm)">
+
+
+            <div class="mb-6 mt-6">
+                <label style="color:aliceblue;margin-left: 30px;"  for="username" class="form-label">user name:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username" name="username"
+                    formControlName="username">
+ 
+
+            </div>
+
+            <div class="mb-6">
+                <label for="policyname" style="color:aliceblue;margin-left: 30px;"class="form-label">policy name:</label>
+                <input type="text" class="form-control" id="policyname" placeholder="Enter policyname" name="policyname"
+                    formControlName="policyname">
+
+
+            </div>
+
+
+            <div class="mb-6">
+                <label for="age" style="color:aliceblue;margin-left: 30px;"class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter age" name="age"
+                    formControlName="age">
+
+
+            </div>
+            
+
+            <button  type="submit" class="btn ">Confirm Apply</button>
+
+
+        </form>
+
+</div>
+    
+
+

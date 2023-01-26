@@ -1,0 +1,31 @@
+.login{
+    width: 400px;
+    margin-top: 150px;
+    margin-left: 550px;
+    background-color: lightblue;
+    height: 250px;
+    border-radius: 10px;
+    padding-left: 25px;
+    background-image: url("https://media.istockphoto.com/id/1351466409/photo/businessman-holding-and-giving-insurance-and-assurance-icon-including-family-health-real.jpg?b=1&s=170667a&w=0&k=20&c=Z6EjtHwQTvkFUhdvhyCZFQloFgoTpXDZmZY54-7E-7E=");
+    
+    
+}
+/*  */
+
+  
+.form-control{
+    width: 330px;
+    margin-top:2px;
+    
+}
+.login button{
+    align-content: center;
+    margin-top: 10px;
+    margin-left: 110px;
+    background-color:blanchedalmond;
+    
+}
+.body{
+    background-color: aqua;
+   
+}

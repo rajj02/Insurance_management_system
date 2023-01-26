@@ -1,0 +1,55 @@
+<div class="container my-5">
+    <h1 class="mb-5" style="color:plum;">
+{{policy.policyName}}
+    </h1>
+    <div class="row">
+      <div class="col-6">
+        <form >
+       
+  
+          <div class="mb-3">
+            <label for="PolicyName" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Policy Name</label>
+            <input type="text" class="form-control" id="PolicyName" name="PolicyName"
+              [(ngModel)]="policy.policyName" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+          </div>
+  
+          <div class="mb-3">
+            <label for="insuranceTye" class="form-label"style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Amount</label>
+            <input type="number" class="form-control" id="Amount" name="Amount"
+              [(ngModel)]="policy.amount" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+          </div>
+  
+          <div class="mb-3">
+            <label for="Duration" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Duration</label>
+            <input type="number" class="form-control" id="Duration" name="Duration"
+             [(ngModel)]="policy.duration" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+          </div>
+                
+  <div class="mb-3">
+    <label for="AgeLimit" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">AgeLimit</label>
+    <input type="number" class="form-control" id="AgeLimit" name="AgeLimit" 
+    [(ngModel)]="policy.ageLimit" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+  </div>
+
+  <div class="mb-3">
+    <label for="PolicyCover" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">PolicyCover</label>
+    <input type="number" class="form-control" id="PolicyCover" name="PolicyCover"
+     [(ngModel)]="policy.policyCover" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+  </div>
+
+  <div class="mb-3">
+    <label for="Description" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Description</label>
+    <input type="text" class="form-control" id="Description" name="Description" 
+    [(ngModel)]="policy.description" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+  </div>
+
+
+
+  
+                
+  <button type="button" routerLink="/confirmapply" class="btn btn-primary m-2"><a  style="color:white;text-decoration:none">Apply</a></button>
+          <!-- <button type="submit" class="btn btn-primary" >Apply</button> -->
+        </form>
+      </div>                                                                   
+     
+  </div>

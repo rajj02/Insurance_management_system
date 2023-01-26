@@ -1,0 +1,59 @@
+      
+      <div class="login">
+        
+
+          <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm)">
+
+
+              <div class="mb-6 mt-6">
+                  <label style="color:aliceblue;margin-left: 30px;"  for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+                      formControlName="email">
+
+                  
+                  <div class="form-text text-danger"
+                      *ngIf="useremail.errors?.['required'] && (useremail.dirty || useremail.touched)">
+                      Email is Required
+                  </div>
+
+                  <div class="form-text text-danger"
+                      *ngIf="useremail.errors?.['email'] && (useremail.dirty || useremail.touched)">
+                      Email is Invalid
+                  </div>
+                  
+
+              </div>
+
+
+
+
+              <div class="mb-6">
+                  <label for="pwd" style="color:aliceblue;margin-left: 30px;"class="form-label">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd"
+                      formControlName="pwd">
+
+                  
+                  <div class="form-text text-danger"
+                      *ngIf="userpass.errors?.['required'] && (userpass.dirty || userpass.touched)">
+                      password is Required
+                  </div>
+
+                  <div class="form-text text-danger"
+                      *ngIf="userpass.errors?.['minlength'] || userpass.errors?.['maxlength']  && (userpass.dirty || userpass.touched)">
+                      password must be at least 6 and max 15 characters.
+                  </div>
+              
+
+              </div>
+              
+
+              <button  [disabled]="LoginForm.invalid" type="submit" class="btn">Login</button>
+
+
+          </form>
+
+</div>
+     
+
+
+  

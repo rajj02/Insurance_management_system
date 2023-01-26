@@ -1,0 +1,77 @@
+<div class="policy">
+
+<form [formGroup]='ApplyForm'(ngSubmit)="ApplyNow(ApplyForm)" class="border form">
+
+<div class="mb-3 mt-3">
+
+    
+
+    <div> 
+        <label for="policyname" class="form-label">Policy Name</label>
+        <input type="text"  class="form-control" id="policyname" placeholder="Enter policyname" name="policyname" 
+         formControlName ="policyname">
+
+        <!-- <div class="form-text text-danger" *ngIf="PolicyName.errors?.['required']&&PolicyName.touched">
+            policy name  is required </div>           -->
+    </div>
+        <br>
+
+     <div>  
+        <label for="amount" class="form-label">Amount per year</label>
+        <input type="number"  class="form-control" id="amount" placeholder="Enter amount/year" name="amount"
+        formControlName ="amount">
+
+        <!-- <div class="form-text text-danger" *ngIf="Amount.errors?.['required']&&Amount.touched">
+          amount  is required </div>    -->
+    </div> 
+        <br>
+
+     <div>   
+        <label for="duration" class="form-label">Duration</label>
+        <input type="number" class="form-control" id="duration" placeholder="Enter duration(in years)" name="duration"
+        formControlName ="duration">
+        
+        <!-- <div class="form-text text-danger" *ngIf="Age.errors?.['required']&&Age.touched">
+            age  is required </div>    -->
+    </div>
+
+    <br>
+
+    <div>   
+       <label for="policycover" class="form-label">policy Cover</label>
+       <input type="number" class="form-control" id="policycover" placeholder="Enter Cover amount" name="policycover"
+       formControlName ="policycover">
+       
+       <!-- <div class="form-text text-danger" *ngIf="Age.errors?.['required']&&Age.touched">
+           age  is required </div>    -->
+   </div>
+
+   <br>
+
+   <div>   
+      <label for="agelimit" class="form-label">Age limit</label>
+      <input type="number" class="form-control" id="agelimit" placeholder="Enter age limit" name="agelimit"
+      formControlName ="agelimit">
+      
+      <!-- <div class="form-text text-danger" *ngIf="Age.errors?.['required']&&Age.touched">
+          age  is required </div>    -->
+  </div>
+
+  <div>   
+    <label for="description" class="form-label">Description</label>
+    <input type="text"  class="form-control" id="description" placeholder="give description" name="description"
+    formControlName ="description">
+    
+    <!-- <div class="form-text text-danger" *ngIf="Age.errors?.['required']&&Age.touched">
+        age  is required </div>    -->
+</div>
+</div>
+
+    <div class="d-grid">
+        <button type="submit" class ="btn btn-primary">Add</button>
+      </div>
+      
+    
+</form>
+
+</div>
